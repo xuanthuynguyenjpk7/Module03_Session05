@@ -1,4 +1,27 @@
 package Bai1;
 
+import java.util.Scanner;
+
 public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhập chuỗi văn bản: ");
+        String text = sc.nextLine();
+
+        System.out.print("Nhập từ cần tìm: ");
+        String word = sc.nextLine();
+
+        int position = text.indexOf(word);
+
+        if (position != -1) {
+            System.out.println("Từ \"" + word + "\" xuất hiện tại vị trí thứ "
+                    + (position) + " trong chuỗi");
+        } else {
+            System.out.println("Không tìm thấy từ \"" + word + "\" trong chuỗi");
+        }
+
+        sc.close();
+    }
 }
